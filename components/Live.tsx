@@ -102,8 +102,8 @@ const Live = ({ canvasRef, undo, redo }: Props) => {
     useEventListener(eventData => {
         const event = eventData.event;
         setReactions((reactions) => reactions.concat([{
-            point: { x: event[0].x, y: event[0].y },
-            value: event[0].value,
+            point: { x: event.x, y: event.y },
+            value: event.value,
             timestamp: Date.now()
         }]))
     })
