@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
-    basePath: "/figma_clone",
-    output: "export",
-    reactStrictMode: true,
+    // basePath: "/figma_clone",
+    // output: "export",
+    // reactStrictMode: true,
 
     images: {
-        unoptimized: true,
+        // unoptimized: true,
         remotePatterns: [
             {
                 protocol: 'https',
