@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
+    basePath: "/figma_clone",
+    output: "export",
+    reactStrictMode: true,
+
     images: {
         remotePatterns: [
             {
