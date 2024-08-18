@@ -201,7 +201,7 @@ export default function Page() {
 
 
     return (
-        <Room>
+        // <Room>
             <main className="h-screen overflow-hidden">
                 <Navbar
                     activeElement={activeElement}
@@ -233,7 +233,7 @@ export default function Page() {
                     />
                 </section>
             </main>
-        </Room>
+        // </Room>
     );
 }
 

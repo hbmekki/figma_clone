@@ -1,14 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
-    // basePath: "/figma_clone",
-    // assetPrefix: "/figma_clone",
+    basePath: "/figma_clone",
+    assetPrefix: "/figma_clone",
     output: "export",
     // reactStrictMode: true,
 
     images: {
 
-        // unoptimized: true,
+        unoptimized: true,
         remotePatterns: [
             {
                 protocol: 'https',
