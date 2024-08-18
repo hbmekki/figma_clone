@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
-    // basePath: "/figma_clone",
+    basePath: "/figma_clone",
     output: "export",
-    // reactStrictMode: true,
+    reactStrictMode: true,
 
     images: {
 
