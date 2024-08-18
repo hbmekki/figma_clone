@@ -2,6 +2,7 @@
 const nextConfig = {
 
     basePath: "/figma_clone",
+    assetPrefix: "/figma_clone",
     output: "export",
     reactStrictMode: true,
 
