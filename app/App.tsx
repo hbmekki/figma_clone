@@ -13,6 +13,7 @@ import { useMutation, useRedo, useStorage, useUndo } from "@liveblocks/react/sus
 import { defaultNavElement } from "@/constants";
 import { handleDelete, handleKeyDown } from "@/lib/key-events";
 import { handleImageUpload } from "@/lib/shapes";
+import { Room } from "./Room";
 
 export default function Page() {
 
@@ -200,37 +201,40 @@ export default function Page() {
 
 
     return (
-        <main className="h-screen overflow-hidden">
-            <Navbar
-                activeElement={activeElement}
-                handleActiveElement={handleActiveElement}
-                imageInputRef={imageInputRef}
-                handleImageUpload={(e: React.ChangeEvent<HTMLInputElement>) => {
-                    e.stopPropagation();
-                    if (!e.target.files) return;
-                    handleImageUpload({
-                        file: e.target.files[0],
-                        canvas: fabricRef as any,
-                        shapeRef,
-                        syncShapeInStorage
-                    })
+        <Room>
 
-                }}
-            />
+            <main className="h-screen overflow-hidden">
+                <Navbar
+                    activeElement={activeElement}
+                    handleActiveElement={handleActiveElement}
+                    imageInputRef={imageInputRef}
+                    handleImageUpload={(e: React.ChangeEvent<HTMLInputElement>) => {
+                        e.stopPropagation();
+                        if (!e.target.files) return;
+                        handleImageUpload({
+                            file: e.target.files[0],
+                            canvas: fabricRef as any,
+                            shapeRef,
+                            syncShapeInStorage
+                        })
 
-            <section className="flex h-full flex-row">
-                <LeftSideBar allShapes={Array.from(canvasObjects)} />
-                <Live canvasRef={canvasRef} undo={undo} redo={redo} />
-                <RightSideBar
-                    elementAttributes={elementAttributes}
-                    setElementAttributes={setElementAttributes}
-                    fabricRef={fabricRef}
-                    isEditingRef={isEditingRef}
-                    activeObjectRef={activeObjectRef}
-                    syncShapeInStorage={syncShapeInStorage}
+                    }}
                 />
-            </section>
-        </main>
+
+                <section className="flex h-full flex-row">
+                    <LeftSideBar allShapes={Array.from(canvasObjects)} />
+                    <Live canvasRef={canvasRef} undo={undo} redo={redo} />
+                    <RightSideBar
+                        elementAttributes={elementAttributes}
+                        setElementAttributes={setElementAttributes}
+                        fabricRef={fabricRef}
+                        isEditingRef={isEditingRef}
+                        activeObjectRef={activeObjectRef}
+                        syncShapeInStorage={syncShapeInStorage}
+                    />
+                </section>
+            </main>
+        </Room>
     );
 }
 
