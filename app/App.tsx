@@ -202,7 +202,6 @@ export default function Page() {
 
     return (
         <Room>
-
             <main className="h-screen overflow-hidden">
                 <Navbar
                     activeElement={activeElement}
