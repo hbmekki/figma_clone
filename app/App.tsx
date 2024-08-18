@@ -1,4 +1,4 @@
-'use client';
+//"use client";
 
 import LeftSideBar from "@/components/LeftSidebar";
 import Live from "@/components/Live";

@@ -1,4 +1,4 @@
-"use client";
+//"use client";
 
 import React, { useCallback, useRef } from "react";
 import { ThreadData } from "@liveblocks/client";

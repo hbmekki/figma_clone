@@ -2,11 +2,11 @@
 const nextConfig = {
 
     // basePath: "/figma_clone",
-    // output: "export",
+    output: "export",
     // reactStrictMode: true,
 
     images: {
-        
+
         // unoptimized: true,
         remotePatterns: [
             {
