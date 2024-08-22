@@ -8,6 +8,10 @@ const nextConfig = {
     // assetPrefix: process.env.NEXT_PUBLIC_PREFIX || '',
     // output: "export",
     // reactStrictMode: true,
+    // basePath: '/figma_clone',
+    assetPrefix: '/figma_clone',
+    output: "export",
+    reactStrictMode: true,
 
     images: {
 
