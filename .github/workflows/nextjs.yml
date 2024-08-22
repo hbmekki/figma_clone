@@ -56,8 +56,8 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
         env:
-          NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY }}
-          NEXT_PUBLIC_PREFIX: ${{ vars.NEXT_PUBLIC_PREFIX }}
+          NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY }}
+          NEXT_PUBLIC_PREFIX: ${{ secrets.NEXT_PUBLIC_PREFIX }}
         with:
           # Automatically inject basePath in your Next.js configuration file and disable
           # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
@@ -79,8 +79,8 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY }}
-          NEXT_PUBLIC_PREFIX: ${{ vars.NEXT_PUBLIC_PREFIX }}
+          NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY }}
+          NEXT_PUBLIC_PREFIX: ${{ secrets.NEXT_PUBLIC_PREFIX }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
