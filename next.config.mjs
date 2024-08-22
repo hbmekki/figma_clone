@@ -2,8 +2,7 @@
 
 const nextConfig = {
 
-    basePath:  process.env.NEXT_PUBLIC_PREFIX || '',
-    assetPrefix: process.env.NEXT_PUBLIC_PREFIX || '',
+    assetPrefix: process.env.BASE_PATH || "",
     output: "export",
     reactStrictMode: true,
 
