@@ -2,20 +2,14 @@
 
 const nextConfig = {
 
-    // basePath: process.env.GITHUB_ACTIONS?  `${process.env?.GITHUB_REPOSITORY.replace(/.*?\//, '/')}`: '',
-    // assetPrefix: process.env.GITHUB_ACTIONS?  `${process.env?.GITHUB_REPOSITORY.replace(/.*?\//, '/')}`: '',
-    // basePath: process.env.NEXT_PUBLIC_PREFIX || '',
-    // assetPrefix: process.env.NEXT_PUBLIC_PREFIX || '',
-    // output: "export",
-    // reactStrictMode: true,
-    // basePath: '/figma_clone',
-    assetPrefix: '/figma_clone',
+    basePath: process.env.GITHUB_ACTIONS?  `${process.env?.GITHUB_REPOSITORY.replace(/.*?\//, '/')}`: '',
+    assetPrefix: process.env.GITHUB_ACTIONS?  `${process.env?.GITHUB_REPOSITORY.replace(/.*?\//, '/')}`: '',
     output: "export",
     reactStrictMode: true,
 
     images: {
 
-        // unoptimized: true,
+        unoptimized: true,
         remotePatterns: [
             {
                 protocol: 'https',
