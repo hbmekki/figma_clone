@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
-    basePath: "/figma_clone",
-    assetPrefix: "/figma_clone",
+    basePath: process.env.NEXT_PUBLIC_PREFIX || '',
+    assetPrefix: process.env.NEXT_PUBLIC_PREFIX || '',
     output: "export",
     // reactStrictMode: true,
 
