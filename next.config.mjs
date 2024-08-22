@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
 
-    basePath: process.env.NEXT_PUBLIC_PREFIX || '',
-    assetPrefix: process.env.NEXT_PUBLIC_PREFIX || '',
+    basePath: process.env.GITHUB_ACTIONS?  `${process.env?.GITHUB_REPOSITORY.replace(/.*?\//, '')}`: '',
+    assetPrefix: process.env.GITHUB_ACTIONS?  `${process.env?.GITHUB_REPOSITORY.replace(/.*?\//, '')}`: '',
     output: "export",
-    // reactStrictMode: true,
+    reactStrictMode: true,
 
     images: {
 
@@ -19,7 +20,7 @@ const nextConfig = {
     },
     typescript: {
         ignoreBuildErrors: true,
-      },
+    },
 };
 
 export default nextConfig;
