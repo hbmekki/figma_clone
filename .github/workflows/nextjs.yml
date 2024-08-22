@@ -61,6 +61,8 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
+          NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY }}
+          NEXT_PUBLIC_PREFIX: ${{ vars.NEXT_PUBLIC_PREFIX }}
       - name: Restore cache
         uses: actions/cache@v4
         with:
