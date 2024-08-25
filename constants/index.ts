@@ -1,7 +1,6 @@
 export const COLORS = ["#DC2626", "#D97706", "#059669", "#7C3AED", "#DB2777"];
 
-export const PREFIX = process.env.GITHUB_ACTIONS ? '/figma_clone' : '';
-// export const PREFIX = process.env.BASE_PATH || "";
+export const PREFIX = process.env.NEXT_PUBLIC_NOT_GITHUB? '' : '/figma_clone';
 
 export const shapeElements = [
   {
