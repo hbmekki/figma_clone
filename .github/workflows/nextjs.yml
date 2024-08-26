@@ -35,8 +35,8 @@ jobs:
     steps:
       - name: testing
         run: |
-          echo "${{ secrets.NEXT_PUBLIC_ASSET_PREFIX }} ${{ env.NEXT_PUBLIC_ASSET_PREFIX }} $NEXT_PUBLIC_ASSET_PREFIX"
-          echo "${{ secrets.NEXT_PUBLIC_BASE_PATH }} ${{ env.NEXT_PUBLIC_BASE_PATH }} $NEXT_PUBLIC_BASE_PATH"
+          echo "NEXT_PUBLIC_ASSET_PREFIX=${{ secrets.NEXT_PUBLIC_ASSET_PREFIX }}  or ${{ env.NEXT_PUBLIC_ASSET_PREFIX }}"
+          echo "NEXT_PUBLIC_BASE_PATH=${{ secrets.NEXT_PUBLIC_BASE_PATH }} or ${{ env.NEXT_PUBLIC_BASE_PATH }}"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
