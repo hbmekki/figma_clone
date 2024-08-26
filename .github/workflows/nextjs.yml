@@ -28,7 +28,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-
+    runs-on: ubuntu-latest
     # env:
     #   NEXT_PUBLIC_ASSET_PREFIX: ${{ secrets.NEXT_PUBLIC_ASSET_PREFIX }}
     #   NEXT_PUBLIC_BASE_PATH: ${{ secrets.NEXT_PUBLIC_BASE_PATH }}
