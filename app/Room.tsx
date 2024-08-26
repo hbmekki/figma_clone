@@ -12,7 +12,7 @@ import Loader from "@/components/Loader";
 export function Room({ children }: { children: ReactNode }) {
     return (
         <LiveblocksProvider
-        publicApiKey='pk_dev_gG_0RqyQC71uD0Bn__1aiWOm58JjjBL2EuBSc75J38-1HKEVZ3NEEwqz1WRUtYpv'
+            publicApiKey={`${process.env.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY}`}
         >
             <RoomProvider
                 id="my-room"

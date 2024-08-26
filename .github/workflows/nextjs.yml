@@ -30,13 +30,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_ASSET_PREFIX: ${{ secrets.NEXT_PUBLIC_ASSET_PREFIX }}
-      NEXT_PUBLIC_BASE_PATH: ${{ secrets.NEXT_PUBLIC_BASE_PATH }}
+      NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY }}
+      NEXT_PUBLIC_ASSET_PREFIX: ${{ vars.NEXT_PUBLIC_ASSET_PREFIX }}
+      NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
     steps:
-      - name: testing
-        run: |
-          echo "NEXT_PUBLIC_ASSET_PREFIX=${{ secrets.NEXT_PUBLIC_ASSET_PREFIX }}  or ${{ env.NEXT_PUBLIC_ASSET_PREFIX }}"
-          echo "NEXT_PUBLIC_BASE_PATH=${{ secrets.NEXT_PUBLIC_BASE_PATH }} or ${{ env.NEXT_PUBLIC_BASE_PATH }}"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
