@@ -2,8 +2,10 @@
 
 const nextConfig = {
 
-    assetPrefix: process.env.NEXT_PUBLIC_NOT_GITHUB? '' : '/figma_clone',
-    basePath: process.env.NEXT_PUBLIC_NOT_GITHUB? '' : '/figma_clone',
+    assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX,
+    basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+    // assetPrefix: process.env.NEXT_PUBLIC_NOT_GITHUB? '' : '/figma_clone',
+    // basePath: process.env.NEXT_PUBLIC_NOT_GITHUB? '' : '/figma_clone',
     output: "export",
     reactStrictMode: true,
 
